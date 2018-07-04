@@ -1,0 +1,32 @@
+{
+  "name": "ridemyway",
+  "version": "1.0.0",
+  "description": "A carpooling application",
+  "main": "/server/app.js",
+  "scripts": {
+    "test": " mocha --require babel-register --timeout 10000 ./test/*.js --exit",
+    "start": "nodemon --exec babel-node -- server/app.js",
+    "build": "babel server -d lib "
+  },
+  "author": "Olatunbosun Adeoye",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^7.10.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  }
+}
