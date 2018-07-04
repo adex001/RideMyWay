@@ -1,7 +1,22 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 
+//importing the Routes
+import ridesRoute from './routes/rides';
+
+// Configure dotenv
+dotenv.config()
 const app = express();
-const port = 3000 || process.env.port;
+
+// App to Use these 
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use('/api/v1/rides', ridesRoute);
+
+
+const port = 3000 || process.env.PORT  ;
 
 app.get('/', (req, res) => {
   res.status(200).json({
