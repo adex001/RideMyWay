@@ -6,7 +6,8 @@ import dotenv from 'dotenv';
 import ridesRoute from './routes/rides';
 
 // Configure dotenv
-dotenv.config()
+dotenv.config();
+
 const app = express();
 
 // App to Use these 
@@ -16,7 +17,7 @@ app.use(bodyParser.json());
 app.use('/api/v1/rides', ridesRoute);
 
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.status(200).json({
