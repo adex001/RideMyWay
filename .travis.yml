@@ -3,7 +3,7 @@ node_js: "8.11.1"
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=8fa8fe4660513837d60514556564d5999efc9191b875fa1db221870e0c8133a3
+    - CC_TEST_REPORTER_ID=175c22b2d59070172782b5c2d313eba0de0e7d5042904c502b2e2c834ef874c6
 
 before_script:
   - npm install nyc
